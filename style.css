@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Roboto&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+:root {
+    --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --color-danger: hsl(0, 100%, 66%);
+
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --dark-violet: hsl(278, 68%, 11%);
+
+    --space-grotesk: 'Space Grotesk', Arial, Helvetica, sans-serif; 
+    --font-size: 18px;
+    --font-weight: 500;
+}
+
+body {
+    width: 100%;
+    font-family: var(--space-grotesk);
+    font-weight: var(--font-weight);
+}
+
+main {
+    width: inherit;
+    position: relative;
+    display: flex;
+    gap: 150px;
+}
+
+.card-section {
+    width: 30%;
+    height: 100vh; 
+    background-image: url('images/bg-main-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column-reverse;
+    color: var(--white);
+}   
+
+.card-section .card-front, .card-section .card-back {
+    width: 400px;
+    height: 200px;
+    padding: 25px;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+}
+
+.card-section .card-front {
+    background-image: url('images/bg-card-front.png');
+    left: 25%;
+    top: -10%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-section .card-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-section .card-back {
+    background-image: url('images/bg-card-back.png');
+    left: 40%;
+    top: -5%;
+
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+.card-input {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.card-input-div, .details-input, .card-input-div .card-expiry-div {
+    display: flex;
+}
+
+.card-input .card-input-div {
+    height: 350px;
+    width: 350px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.complete-state {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.success-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.card-input-div input::placeholder {
+    padding-left: .5rem;
+}
+
+.details-input {
+    flex-direction: column;
+}
+
+.card-input-div .card-expiry-div {
+    gap: 2rem;
+}
+
+.input-field, .date-input-field {
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid var(--dark-grayish-violet);
+    outline: var(--dark-grayish-violet);
+}
+
+.date-input-field {
+    width: 60px;
+    margin-right: 4px;
+}
+
+.confirm-button, .success-button {
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid var(--dark-grayish-violet);
+    background-color: var(--dark-violet);
+    color: var(--white);
+}
+
+.complete-state {
+    width: 300px;
+    height: 250px;
+}
+
+.success-message {
+    line-height: 2rem;
+}
+
+.complete-state img {
+    width: 60px;
+}
+
+.success-button {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        width: 100vw;
+        flex-direction: column;
+    }
+    .card-section {
+        width: 100vw;
+        height: 200px;
+        flex-direction: column;
+        position: relative;
+        background-image: url('images/bg-main-desktop.png');
+    }
+    .card-section .card-front, .card-section .card-back {
+        width: 250px;
+        min-height: 120px;
+        padding: 25px;
+        border-radius: 10px;
+    }    
+    .card-section .card-back {  
+        left: 15%;
+        top: 5%;
+        z-index: 0;
+    }
+    .card-section .card-front {
+        left: 5%;
+        top: -30%;
+        z-index: 1;
+    }
+    .card-section .card-front h1 {
+        font-size: 1.2rem;
+    }
+}

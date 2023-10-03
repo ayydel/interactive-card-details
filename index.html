@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="card-section">
+            <div class="card-back">
+                <p class="cvc-number" id="cvc-number">000</p>
+            </div>
+            <div class="card-front">
+                <img src="images/card-logo.svg" width="80px" alt="card logo">
+                <h1 id="card-number">0000 0000 0000 0000</h1>
+                <div class="card-details">
+                    <p class="user-name" id="user-name">FELICIA LIERE</p>
+                    <p class="exp-date" id="exp-date">00/00</p>
+                </div>
+            </div> 
+        </section>
+
+        <!-- START OF CARD INPUT-->
+        <section class="card-input">
+            <div class="card-input-div"  id="card-input-div">
+                <div class="details-input">
+                    <label for="name-input">CARDHOLDER NAME</label>
+                    <input type="text" id="name-input" class="input-field" placeholder="e.g. Felicia Leire">
+                    <p id="invalid-name"></p>
+                </div>
+                <div class="details-input">
+                    <label for="card-number-input">CARD NUMBER</label>
+                    <input type="text" id="card-number-input" class="input-field" name="card-number" placeholder="e.g. 1234 5678 9123 0000">
+                    <p id="invalid-input"></p>
+                </div>
+                
+                <div class="card-expiry-div">
+                <div class="date-input">
+                    <label for="date-input-month">EXP. DATE (MM/YY)</label>
+                    <div>
+                        <input type="text" class="date-input-field" id="date-input-month" name="card-expiry" placeholder="MM">
+                        <input type="text" class="date-input-field" id="date-input-year" name="card-expiry" placeholder="YY">
+                        <p id="required-input-one"></p>
+                    </div>
+                </div>
+                 
+                <div class="cvc-input">
+                    <label for="cvc-input">CVC</label>
+                    <div>
+                        <input type="text" class="input-field" id="cvc-input" name="cvc-number" placeholder="e.g. 123">
+                    </div>
+                    <p id="required-input-two"></p>
+                </div>
+            </div>   
+            <button class="confirm-button" id="confirm-button">Confirm</button>
+            </div>  
+
+            <div  class="complete-state" id="complete-state">
+                <img src="images/icon-complete.svg" alt="success icon">
+                <div class="success-message">
+                    <h2>THANK YOU!</h2>
+                    <p class="success-message">We've added your card details</p>
+                </div>
+                <button class="success-button" id="success-button">Continue</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
